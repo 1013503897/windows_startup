@@ -38,6 +38,9 @@
     <ClInclude Include="startup_reg.h">
       <Filter>reg</Filter>
     </ClInclude>
+    <ClInclude Include="schtasks.h">
+      <Filter>schtasks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windows_startup.cpp">
@@ -51,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="startup_reg.cpp">
       <Filter>reg</Filter>
+    </ClCompile>
+    <ClCompile Include="schtasks.cpp">
+      <Filter>schtasks</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

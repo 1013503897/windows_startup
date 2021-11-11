@@ -128,7 +128,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="com_hijack.cpp" />
+    <ClCompile Include="schtasks.cpp" />
     <ClCompile Include="startup_dir.cpp" />
     <ClCompile Include="startup_reg.cpp" />
     <ClCompile Include="windows_startup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="com_hijack.h" />
+    <ClInclude Include="schtasks.h" />
     <ClInclude Include="startup_dir.h" />
     <ClInclude Include="startup_reg.h" />
     <ClInclude Include="windows_startup.h" />

@@ -2,6 +2,7 @@
 #include "startup_dir.h"
 #include "startup_reg.h"
 #include "com_hijack.h"
+#include "schtasks.h"
 
 int main(int argc, char* argv[])
 {
@@ -37,9 +38,9 @@ int main(int argc, char* argv[])
 		printf("Usage:\n	windows_startup.exe -install install startup\n	windows_startup.exe -uninstall uninstall startup\r\n");
 	}*/
 	Startup* startup;
-	startup = new StartupCom();
-	// startup->set_target("C:\\Users\\weixingyu\\Desktop\\demo_exe.exe");
-	startup->set_target("C:\\Users\\weixingyu\\Desktop\\demo_dll.dll");
+	startup = new StartupSchtasks();
+	startup->set_target("C:\\Users\\weixingyu\\Desktop\\demo_exe.exe");
+	//startup->set_target("C:\\Users\\weixingyu\\Desktop\\demo_dll.dll");
 	startup->install();
 	return 0;
 }
