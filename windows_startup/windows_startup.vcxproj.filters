@@ -18,6 +18,12 @@
     <Filter Include="com_hijack">
       <UniqueIdentifier>{75206297-b67f-47da-a479-312fa80948a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="known_dlls">
+      <UniqueIdentifier>{6bb9fa99-da0f-4c5f-bb16-c95b7bdad675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="schtasks">
+      <UniqueIdentifier>{677a8cc7-0805-4c20-98d1-cb98d4922475}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="windows_startup.h">
