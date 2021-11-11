@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="reg">
+      <UniqueIdentifier>{88fde9a8-4c0e-4705-bf79-6dafaea82ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="dir">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="wmi">
+      <UniqueIdentifier>{73592aed-2c0c-4779-a8aa-efaafee153c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="com_hijack">
+      <UniqueIdentifier>{75206297-b67f-47da-a479-312fa80948a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="windows_startup.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="startup_dir.h">
+      <Filter>dir</Filter>
+    </ClInclude>
+    <ClInclude Include="com_hijack.h">
+      <Filter>com_hijack</Filter>
+    </ClInclude>
+    <ClInclude Include="startup_reg.h">
+      <Filter>reg</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="windows_startup.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="startup_dir.cpp">
+      <Filter>dir</Filter>
+    </ClCompile>
+    <ClCompile Include="com_hijack.cpp">
+      <Filter>com_hijack</Filter>
+    </ClCompile>
+    <ClCompile Include="startup_reg.cpp">
+      <Filter>reg</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
